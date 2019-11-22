@@ -1,7 +1,7 @@
 # Django React Team Manager
 Django with React creating a system to Manager your Team.
 
-##### Useful links
+#### Useful links
 - [Django Rest Framework Docs](https://www.django-rest-framework.org/)
 - [Django Rest Knox Docs](https://github.com/James1345/django-rest-knox)
 - [Bootstrap Themes](https://www.bootstrapcdn.com/bootswatch/)
@@ -10,13 +10,13 @@ Django with React creating a system to Manager your Team.
 - [Webpack](https://webpack.js.org/guides/getting-started/)
 - [Axios](https://github.com/axios/axios)
 
-##### API endpoints
+#### API endpoints
 - localhost:8000/api/teams/ => (GET) list of all results
 - localhost:8000/api/teams/ => (POST) add a new team
 - localhost:8000/api/days/${id} => (PUT) update data from team
 - localhost:8000/api/days/${id}/ => (DELETE) delete data from team
 
-###### Json exemple:
+#### Json exemple:
 
 ```Json5
 {
