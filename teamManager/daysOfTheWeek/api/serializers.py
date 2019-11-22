@@ -6,4 +6,4 @@ from daysOfTheWeek.models import DaysOfWeek
 class DaysOfWeekSerializer(ModelSerializer):
     class Meta:
         model = DaysOfWeek
-        fields = '__all__'
+        fields = ('dayOfWeek', )
