@@ -11,7 +11,7 @@ class TeamSerializer(ModelSerializer):
 
     class Meta:
         model = Team
-        fields = ('name', 'email', 'username', 'city',
+        fields = ('id', 'name', 'email', 'username', 'city',
                   'daysOfWeek', 'posts', 'albums', 'photos')
 
     def create_daysOfWeek(self, daysOfWeek, team):
