@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { GET_TEAMS, DELETE_TEAM } from './types';
+import { GET_TEAMS, DELETE_TEAM, ADD_TEAM } from './types';
 
 export const get_TEAMS = () => dispatch => {
     /*
@@ -22,6 +22,16 @@ export const deleteTEAM = (id) => dispatch => {
         dispatch({
             type: DELETE_TEAM,
             payload: id
+        });
+    }).catch(err => console.log(err));
+};
+
+export const addTEAM = (team) => dispatch => {
+
+    axios.post('http://localhost:8000/api/teams/', team).then(res => {
+        dispatch({
+            type: ADD_TEAM,
+            payload: res.data
         });
     }).catch(err => console.log(err));
 };

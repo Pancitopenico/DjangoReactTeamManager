@@ -8,7 +8,9 @@ import teams from '../../reducers/teams';
 export class TeamList extends Component {
 
     static Protypes = {
-        teams: Protypes.array.isRequired
+        teams: Protypes.array.isRequired,
+        get_TEAMS: Protypes.func.isRequired,
+        deleteTEAM: Protypes.func.isRequired
     };
 
     componentDidMount() {
@@ -19,16 +21,6 @@ export class TeamList extends Component {
         return (
             <Fragment>
                 <h1>Users</h1>
-                {/* log to see my arrays with days
-                no ideia how to send this data to mey table
-                same problem with ride in group
-                {this.props.teams.map(team => (
-                    console.log(team.daysOfWeek)
-                    console.log()
-                    team.daysOfWeek.map(day => console.log(day))
-                ))}
-                */}
-
                 <div className="table-responsive">
                     <table className="table table-striped">
                         <thead>
