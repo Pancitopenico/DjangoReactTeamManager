@@ -18,6 +18,16 @@ export class TeamList extends Component {
         return (
             <Fragment>
                 <h1>Users</h1>
+                {/* log to see my arrays with days
+                no ideia how to send this data to mey table
+                same problem with ride in group
+                {this.props.teams.map(team => (
+                    console.log(team.daysOfWeek)
+                    console.log()
+                    team.daysOfWeek.map(day => console.log(day))
+                ))}
+                */}
+
                 <div className="table-responsive">
                     <table className="table table-striped">
                         <thead>
@@ -42,7 +52,7 @@ export class TeamList extends Component {
                                     <td>{team.email}</td>
                                     <td>{team.city}</td>
                                     <td>team.rideInGroup</td>
-                                    <td>daysOfWeek</td>
+                                    <td>team.daysOfWeek</td>
                                     <td>{team.posts}</td>
                                     <td>{team.albums}</td>
                                     <td>{team.photos}</td>
