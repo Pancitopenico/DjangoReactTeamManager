@@ -15,7 +15,7 @@ Django with React creating a system to Manager your Team.
 #### API endpoints
 - localhost:8000/api/teams/ => (GET) list of all results
 - localhost:8000/api/teams/ => (POST) add a new team
-- localhost:8000/api/days/${id} => (PUT) update data from team
+- localhost:8000/api/days/${id}/ => (PUT) update data from team
 - localhost:8000/api/days/${id}/ => (DELETE) delete data from team
 
 #### Json exemple:

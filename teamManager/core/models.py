@@ -1,6 +1,4 @@
 from django.db import models
-from daysOfTheWeek.models import DaysOfWeek
-from rideInGroup.models import RideInGroup
 
 
 class Team(models.Model):
@@ -8,8 +6,8 @@ class Team(models.Model):
     email = models.EmailField(max_length=100, unique=True)
     username = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
-    daysOfWeek = models.ManyToManyField(DaysOfWeek)
-    #rideInGroup = models.OneToOneField(DaysOfWeek)
+    daysOfWeek = models.CharField(max_length=100)
+    rideInGroup = models.CharField(max_length=100)
     posts = models.IntegerField(null=True, blank=True)
     albums = models.IntegerField(null=True, blank=True)
     photos = models.IntegerField(null=True, blank=True)

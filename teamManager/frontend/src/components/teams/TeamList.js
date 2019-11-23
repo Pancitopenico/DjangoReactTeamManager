@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Protypes from 'prop-types';
 
-import { get_TEAMS } from '../../actions/teams';
+import { get_TEAMS, deleteTEAM } from '../../actions/teams';
+import teams from '../../reducers/teams';
 
 export class TeamList extends Component {
 
@@ -51,13 +52,14 @@ export class TeamList extends Component {
                                     <td>{team.name}</td>
                                     <td>{team.email}</td>
                                     <td>{team.city}</td>
-                                    <td>team.rideInGroup</td>
-                                    <td>team.daysOfWeek</td>
+                                    <td>{team.rideInGroup}</td>
+                                    <td>{team.daysOfWeek}</td>
                                     <td>{team.posts}</td>
                                     <td>{team.albums}</td>
                                     <td>{team.photos}</td>
                                     <td>
-                                        <button className="btn btn-danger btn-sm">
+                                        <button onClick={this.props.deleteTEAM.bind(this, team.id)}
+                                            className="btn btn-danger btn-sm">
                                             Delete
                                         </button>
                                     </td>
@@ -79,4 +81,4 @@ const mapStateToProps = state => ({
     teams: state.teams.teams
 });
 
-export default connect(mapStateToProps, { get_TEAMS })(TeamList);
+export default connect(mapStateToProps, { get_TEAMS, deleteTEAM })(TeamList);
