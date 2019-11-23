@@ -15,32 +15,23 @@ Django with React creating a system to Manager your Team.
 #### API endpoints
 - localhost:8000/api/teams/ => (GET) list of all results
 - localhost:8000/api/teams/ => (POST) add a new team
-- localhost:8000/api/days/${id}/ => (PUT) update data from team
-- localhost:8000/api/days/${id}/ => (DELETE) delete data from team
+- localhost:8000/api/teams/${id}/ => (PUT) update data from team
+- localhost:8000/api/teams/${id}/ => (DELETE) delete data from team
 
 #### Json exemple:
 
 ```Json5
 {
-        "name": "Teste",
-        "email": "teste@teste.com",
-        "username": "Testinho",
-        "city": "Testelandia",
-        "daysOfWeek": [
-            {
-                "dayOfWeek": "Mon"
-            },
-            {
-                "dayOfWeek": "Thu"
-            },
-            {
-                "dayOfWeek": "Sat"
-            }
-        ],
-        "posts": 10,
-        "albums": 15,
-        "photos": 18
-    }
+    "name": "Teste8",
+    "email": "teste8@teste.com",
+    "username": "Testinho8",
+    "city": "Testelandia8",
+    "daysOfWeek": "Sat",
+    "rideInGroup": "Sometimes",
+    "posts": 19,
+    "albums": 150,
+    "photos": 200
+}
 ```
 ### Testando meu projeto
 
